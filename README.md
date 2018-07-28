@@ -1,11 +1,15 @@
 # Support-Vector-Machine-SVM-for-Predicting-Stock-Market-Weekly-Trend
 Applying SVM to the Financial Markets to uncover key insights for Investment
 
-The daily stock market data for S&P500 was extracted from Yahoo Finance from Jan 1, 2012 to 30 June, 2018. The raw data consisted of Open, High, Low and Close Prices and Volume. It was converted to Weekly data based on every Friday. 
+The daily stock market data for S&P500 was extracted from Yahoo Finance from Jan 1, 2011 to 30 June, 2018. The raw data consisted of Open, High, Low and Close Prices and Volume. It was converted to Weekly data based on every Friday. 
 
-Data Processing: 4 Distinct Technical Indicators were genenerated from the price data using the quantmod package. The change in value of the each indicator with respect to the previous period was then calculated.
+Data Processing: 
 
-Predicted Variable: The change in the Close Price was taken as proxy for Price Trend. If Close Price for next month is higher than the Closing Price of the previous month, then the trend is set to +1 else its set to 0. The dataset was then cleansed from dates for which at least a part of the data was missing.
+10 Distinct Technical Indicators (Exponential Moving Averages) were genenerated from the price data using the quantmod package. The change in value of the each indicator with respect to the previous period was then calculated.
+
+Predicted Variable: 
+
+The change in the Close Price was taken as proxy for Price Trend. If Close Price for next month is higher than the Closing Price of the previous month, then the trend is set to +1 else its set to 0. The dataset was then cleansed from dates for which at least a part of the data was missing.
 
 Assumption: The probability of the close prices for 2 consequtive periods of being equaal is very low or 0 from my observation. Hence, I ignored that condition.
 
